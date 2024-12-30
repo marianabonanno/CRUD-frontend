@@ -23,7 +23,7 @@ export const createTurno = async ({ dia, hora, servicio }) => {
 
 
   export const fetchTurnos = async () => {
-    const API = "https://crud-backend-u65g.onrender.com/";
+    const API = "https://crud-backend-u65g.onrender.com";
     try {
       const response = await fetch(`${API}/turnos`, {
         method: "GET",
