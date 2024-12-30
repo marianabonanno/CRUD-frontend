@@ -60,8 +60,7 @@ export const createTurno = async ({ dia, hora, servicio }) => {
       throw new Error("Error al obtener turnos");
     }
   
-    const data = await response.json();
-    return data; 
+    return  await response.json();
   } catch (err) {
     console.error("Error al buscar el turno:", err);
     throw err;
