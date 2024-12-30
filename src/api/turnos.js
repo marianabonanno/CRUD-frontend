@@ -62,7 +62,7 @@ export const createTurno = async ({ dia, hora, servicio }) => {
   
     const data = await response.json();
     return data; 
-  } catch (error) {
+  } catch (err) {
     console.error("Error al buscar el turno:", err);
     throw err;
   }
