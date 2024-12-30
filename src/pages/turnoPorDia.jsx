@@ -27,7 +27,7 @@ function TurnoPorDia() {
       }
     } catch (err) {
       console.error("Error al obtener turnos por día:", err);
-      setError("Hubo un problema al cargar los turnos. Intenta nuevamente.");
+      setError("No hay turnos disponibles para este día.");
     } finally {
       setLoading(false);
     }
