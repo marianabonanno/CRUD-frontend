@@ -2,7 +2,7 @@ export const registrarUsuario = async (userData) => {
     const API = 'https://crud-backend-u65g.onrender.com';
   
     try {
-      const registroPost = await fetch(`${API}/auth`, {
+      const registroPost = await fetch(`${API}/auth/registro`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
