@@ -47,6 +47,7 @@ export const createTurno = async ({ dia, hora, servicio }) => {
   export const fetchTurnosPorDia = async ({ dia }) => {
     const API = "https://crud-backend-u65g.onrender.com"; 
   
+  try {
     const response = await fetch(`${API}/turnos/pordia`, {
       method: "POST",
       headers: {
@@ -59,8 +60,15 @@ export const createTurno = async ({ dia, hora, servicio }) => {
       throw new Error("Error al obtener turnos");
     }
   
-    return await response.json();
+    const data = await response.json();
+    return data; 
+  } catch (error) {
+    console.error("Error al buscar el turno:", err);
+    throw err;
+  }
   };
+    
+  
   
   export const fetchDeleteTurno = async ({ dia, hora }) => {
     const API = "https://crud-backend-u65g.onrender.com"; 
