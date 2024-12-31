@@ -19,8 +19,8 @@ function EliminarTurno() {
       const result = await fetchDeleteTurno({ dia, hora }); 
       setMessage(result.message); 
     } catch (err) {
-      console.error("Error al eliminar turno:", err);
-      setError("Hubo un problema al eliminar el turno. Intenta nuevamente.");
+      console.error("No hay turno para ese día y hora:", err);
+      setError("No hay turno para ese día y hora. Intenta nuevamente.");
     } finally {
       setLoading(false);
     }
